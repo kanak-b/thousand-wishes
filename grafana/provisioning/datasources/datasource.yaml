@@ -1,0 +1,15 @@
+apiVersion: 1
+datasources:
+  - name: PostgreSQL
+    type: postgres
+    uid: streaming-postgres
+    access: proxy
+    url: postgres:5432
+    database: streaming_analytics
+    user: postgres
+    secureJsonData:
+      password: postgres
+    jsonData:
+      sslmode: disable
+      postgresVersion: 1500
+      timeInterval: "1s"
